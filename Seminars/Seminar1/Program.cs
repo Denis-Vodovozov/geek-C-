@@ -9,7 +9,7 @@ int quad = num * num;
 Console.WriteLine($"квадрат из числа {num} это {quad}");
 */
 
-
+/*
 // Задача 2.
 
 Console.Write("введите первое число ");
@@ -26,4 +26,18 @@ if (n1 == quad2)
 else
 {
     Console.WriteLine($"число {n1} это не квадрат числа {n2}");
+}
+*/
+
+// Задача 3.
+
+Console.Write("введите целое положительное число ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int current = number * (-1);
+
+while(current <= number)
+{
+    Console.Write(current + " ");
+    current++;
 }
