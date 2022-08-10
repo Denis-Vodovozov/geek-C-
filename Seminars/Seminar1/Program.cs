@@ -29,6 +29,7 @@ else
 }
 */
 
+/*
 // Задача 3.
 
 Console.Write("введите целое положительное число ");
@@ -41,3 +42,14 @@ while(current <= number)
     Console.Write(current + " ");
     current++;
 }
+*/
+
+
+// Задача 4.
+
+Console.Write("введите целое трехзначное число ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int ed = num % 10;
+
+Console.WriteLine($"последнее цифра числа {num} это {ed}");
