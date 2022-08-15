@@ -3,29 +3,48 @@
 
 int FindSecDig(int num)
 {
-    int sec = num % 100;
-    int ed = num % 10;
-    return (sec - ed) / 10;
+    int dec = num / 10 % 10;
+    return dec;
 }
-Console.Write("введите трехзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int secDig = FindSecDig(number);
-Console.Write($"вторая цифра числа {number} это {secDig}");
+int randomNumber = new Random().Next(100, 999);
+int secDig = FindSecDig(randomNumber);
+Console.Write($"вторая цифра числа {randomNumber} это {secDig}");
 */
 
 /*
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-645 -> 5
+void IsThirdDig(int num)
+{
+    if (num <= 99)
+        Console.WriteLine($"в числе {num} третьей цифры нет");
+    else
+    {
+        while (num > 999)
+            num = num / 10;
+        if (num <= 999)
+            Console.WriteLine($"третья цифра это {num % 10}");
+    }
+}
+Console.Write("введите число ");
+int number = Convert.ToInt32(Console.ReadLine());
+IsThirdDig(number);
+*/
 
-78 -> третьей цифры нет
-
-32679 -> 6
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-6 -> да
-7 -> да
-1 -> нет
-*/
+bool FindWeekend (int day_number)
+{
+   if(day_number >= 6)
+      return true;
+   
+   else
+      return false;
+}
+Console.Write("Input any number of a week day: ");
+int day_number = Convert.ToInt32(Console.ReadLine());
+bool FindDay = FindWeekend(day_number);
+Console.WriteLine(FindDay);
+
 
