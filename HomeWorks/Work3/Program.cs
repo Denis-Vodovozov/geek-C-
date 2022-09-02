@@ -35,15 +35,43 @@ int num = Convert.ToInt32(Console.ReadLine());
 Palindrom(num);
 */
 
+/*
 //Задача 21 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-A (3,6,8); B (2,1,-7), -> 15.84
-
-A (7,-5, 0); B (1,-1,9) -> 11.53
-
+double FindDistance(double x1, double y1, double z1, double x2, double y2, double z2)
+{
+    return Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2));
+}
+Console.Write("Введите координату первой точки по оси Х: ");
+double xa = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату первой точки по оси У: ");
+double ya = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату первой точки по оси Z: ");
+double za = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату второй точки по оси Х: ");
+double xb = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату второй точки по оси У: ");
+double yb = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите координату второй точки по оси Z: ");
+double zb = Convert.ToDouble(Console.ReadLine());
+double distance = FindDistance(xa, ya, za, xb, yb, zb);
+Console.WriteLine($"Расстояние между двумя точками равно {distance}");
+*/
+/*
 //Задача 23 Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-3 -> 1, 8, 27
-5 -> 1, 8, 27, 64, 125
+void ShowQube(int n)
+{
+    int current = 1;
+    while (current <= n)
+    {
+        Console.WriteLine($"Куб числа {current} = {current * current * current}");
+        current++;
+    }
+}
+Console.Write("Введите любое целое число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+ShowQube(number);
 */
+
 
