@@ -1,69 +1,72 @@
 ﻿/*
 // Задача 64: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
-void Numbers(int n, int m)
+void ShowNumbers(int a, int b)
 {
-    if(m != n)
+    if (b != a)
+    {
+        if (b > a)
         {
-        if (m > n) 
-            {
-                Numbers (n, m - 1);
-                Console.Write(" " + m);
-            }
+            ShowNumbers(a, b - 1);
+            Console.Write(" " + b);
+        }
         else
-            {
-                Numbers(m, n - 1);
-                Console.Write(" " + n);
-            }
-        } 
+        {
+            ShowNumbers(b, a - 1);
+            Console.Write(" " + a);
+        }
+    }
     else
-    Console.Write(m);
+        Console.Write(b);
 }
-Console.Write("Input first number: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input second number: ");
-int b = Convert.ToInt32(Console.ReadLine());
-Numbers(a, b);
+Console.Write("Введите первое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("введите второе число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+ShowNumbers(m, n);
 */
 
 /*
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-int SumNumbers(int n, int m)
+int SumOfNumbers(int a, int b)
 {
-    if(m != n)
-        {
-            if (m > n) 
-                return m + SumNumbers(n, m - 1);
-            else
-                return n + SumNumbers(m, n - 1);
-        } 
+    if (b != a)
+    {
+        if (b > a)
+            return b + SumOfNumbers(a, b - 1);
+        else
+            return a + SumOfNumbers(b, a - 1);
+    }
     else
-        return m;
+        return b;
 }
-Console.Write("Input first number: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input second number: ");
-int b = Convert.ToInt32(Console.ReadLine());
-int sum = SumNumbers(a, b);
-Console.WriteLine($"Sum of all numbers between {a} and {b} is {sum}");
+Console.Write("Введите первое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int sum = SumOfNumbers(m, n);
+Console.WriteLine($"Сумма всех чисел в промежутке от {m} до {n} ровна {sum}");
 */
 
 /*
 // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
-int Ackerman(int m, int n)
+int Ackerman(int a, int b)
 {
-    if(m == 0) return n + 1;
-    if(m > 0 && n == 0) return Ackerman(m - 1, 1);      
-    if(m > 0 && n > 0) return Ackerman(m - 1, Ackerman(m, n - 1));
+    if (a == 0) 
+    return b + 1;
+    if (a > 0 && b == 0) 
+    return Ackerman(a - 1, 1);
+    if (a > 0 && b > 0) 
+    return Ackerman(a - 1, Ackerman(a, b - 1));
     else
-        {
-            Console.WriteLine("Check first and second number. They must be non-negative");
-            return 0;
-        }
+    {
+        Console.WriteLine("Проверьте числа, они должны быть неотрицательными");
+        return 0;
+    }
 }
-Console.Write("Input first number: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input second number: ");
-int b = Convert.ToInt32(Console.ReadLine());
-int ack = Ackerman(a, b);
-Console.WriteLine($"The ackerman function is {ack}");
+Console.Write("Введите первое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int result = Ackerman(m, n);
+Console.WriteLine($"Функция Аккермана ровна {result}");
 */
